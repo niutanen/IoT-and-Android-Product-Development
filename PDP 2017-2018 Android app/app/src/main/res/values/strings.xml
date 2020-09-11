@@ -1,0 +1,40 @@
+<resources>
+    <!-- Strings related to itemadditionActivity -->
+    <string name="app_name">FoodGuard</string>
+    <string name="dialog_select_prompt">Choose a picture</string>
+    <string name="dialog_select_camera">Camera</string>
+    <string name="dialog_select_gallery">Gallery</string>
+    <string name="dialog_createbox">do you want to connect a new box?</string>
+
+    <!-- Strings related to main activity -->
+    <string name="item_name">Item Name</string>
+    <string name="image_picker_error">Image does not exist</string>
+    <string name="done_button">done</string>
+    <string name="short_term">Short-term</string>
+    <string name="medium_term">Medium-term</string>
+    <string name="long_term">Long-term</string>
+    <string name="delete">Delete</string>
+    <string name="dispose">Lumos</string>
+    <string name="edit">Edit</string>
+    <string name="btn_gone">Gone</string>
+    <string name="next_item">Next Item</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Log in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="title_activity_login2">Sign in</string>
+    <string name="signUpPrompt">It seems that your account does not exist, do you want to sign up?</string>
+    <string name="signUpDeny">No thank you</string>
+    <string name="signUpAccept">Yes please</string>
+    <string name="logoutText">Do you want to log out?</string>
+    <string name="title_activity_recipe_web_view">RecipeWebView</string>
+
+</resources>

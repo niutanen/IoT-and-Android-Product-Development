@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5cb4e5</color>
+    <color name="colorPrimaryDark">#ffff</color>
+    <color name="colorAccent">#000000</color>
+    <color name="colorOOrange">#E89C3E</color>
+    <color name="colorOBlue">#5cb4e5</color>
+    <color name="colorOGreen">#C3D430</color>
+    <color name="myGreen">#22cc7e</color>
+    <color name="myRed">#ff5a5b</color>
+    <color name="whitebg">#F2F7F8</color>
+    <color name="commentGrey">#858585</color>
+    <color name="white">#ffff</color>
+    <color name="textBlue">#239ad3</color>
+
+</resources>
