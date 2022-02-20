@@ -1,6 +1,7 @@
 # Foodguard
 Product Development Project 2017-2018 for Orthex at Aalto University
-![Image of Foodguard](![DSC_0669](https://user-images.githubusercontent.com/35771181/154860398-5b6813e0-7b08-469f-a29c-9fda7b7ceee5.JPG))
+
+![Image of foodguard app and IOT device](https://user-images.githubusercontent.com/35771181/154860423-049b961f-e98c-41a8-a460-398b4503d094.JPG)
 
 The app we created to support Android 5.0 (api 21 or LOLLIPOP) or higher. Android was chosen because it accounts for 70% market-share in the Finnish smartphone market, and 85% of Android devices support API 21 or higher (59% of all smartphones in Finland as of August 2017). 
 The user information is saved on an google’s Firebase Database servers, where the user accesses it through the app when they log in. For these cloud services, google Firebase Database was used, along with Firebase Authentication because of ease of integration, and the possibility to easily integrate advertising and other features in the future. These services fees are shown in the figures below.  During the course of the development, the monthly downloads have been around 40 MB per month, with a maximum of 4 concurrent users, with 16 maximum active users. With the user data being stored amounting to a total of 25.6 kB. However, users were not storing as much information as expected in the database, and were not using the app frequently. Under normal use, the expected data saved per person would amount to roughly 1,6 kB per person, with an average download of 10 MB per month. These estimates were determined with the Stetson-Harris method, as well as looking at the most active user during the early testing. 
