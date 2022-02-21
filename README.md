@@ -1,14 +1,39 @@
 # Foodguard
-Product Development Project 2017-2018 for Orthex at Aalto University
+Product Development Project 2017-2018 for Orthex at Aalto University.
+In this project the aim was to provide additional value to Orhtex by integrating a "smart product" that would assist with their core businesses. After significant market research and ideation, our focus was narrowed to their food storage. 
+In food storage, we identified food waste being a problem. This was due to people forgetting what was in the storage containers, and when that food was put into them. To address this problem, we created a attachable e-paper display that could be easily controlled by an app.
 
 ![Image of foodguard app and IOT device](https://user-images.githubusercontent.com/35771181/154860423-049b961f-e98c-41a8-a460-398b4503d094.JPG)
 
-The app we created to support Android 5.0 (api 21 or LOLLIPOP) or higher. Android was chosen because it accounts for 70% market-share in the Finnish smartphone market, and 85% of Android devices support API 21 or higher (59% of all smartphones in Finland as of August 2017). 
-The user information is saved on an google’s Firebase Database servers, where the user accesses it through the app when they log in. For these cloud services, google Firebase Database was used, along with Firebase Authentication because of ease of integration, and the possibility to easily integrate advertising and other features in the future. These services fees are shown in the figures below.  During the course of the development, the monthly downloads have been around 40 MB per month, with a maximum of 4 concurrent users, with 16 maximum active users. With the user data being stored amounting to a total of 25.6 kB. However, users were not storing as much information as expected in the database, and were not using the app frequently. Under normal use, the expected data saved per person would amount to roughly 1,6 kB per person, with an average download of 10 MB per month. These estimates were determined with the Stetson-Harris method, as well as looking at the most active user during the early testing. 
+The team comprised of 3 mechanical engineering majors, 1 electrical engineering major, 2 design majors and 3 marketing majors (remotely).  
 
-With less frequent updates to the server, and some optimization, these figures could be reduced, however, with the fees being non-exorbitant, it would not be the primary cost reduction method we propose. 
-For streamlining the item addition process, we added image recognition functionality with the aid of , Google’s Cloud vision API. The cloud vision platform sends the image to google’s servers where it returns keywords and the read text. The app then reads that text and searches the local database for similar food to estimate the expiration. For the services, the costs would soon overshadow the database costs. For the pricing reference please refer to the figure below. 
+## The product
+The premise of the app was to help track what food you have at home, and remind the user when something was going to expire. This was done by having the user add their food items by hand, or take a picture of the item they wanted to add. An item would be created in a list, an expected expiration date would be suggested which could be modified if needed. At this stage, the user could connect a "FoodGuard" tag to the item, which would display the name of the food and the expiration date. The tag would turn Red, when the food item was approaching the expiration date.
 
- These prices, in conjunction with the slow processing of request causes us to consider the image recognition as one of the foremost areas of improvement. By changing the server based image recognition to a local one (possibly using TensorFlow), the operating costs of the feature could be nullified.
- 
-Security is an issue that needs to be adressed, if this product is carried foreward. As the tightening EU regulations regarding data handling and user information, more burden is placed on disclosing what data is being collected. As regulations are extending, and becoming more stringent please refer to the most up do date policies from  https://ec.europa.eu/info/law/law-topic/data-protection_en
+## Product architecture
+The app would create data onto a firebase server, from which the IOT device would fetch the data and update the acknowledgment that data had been recieved.
+
+For streamlining the item addition process, we added image recognition functionality with the aid of Google’s Cloud vision API. The cloud vision platform sends the image to google’s servers where it returns keywords and the read text. The app then reads that text and searches the local database for similar food to estimate the expiration. 
+![image](https://user-images.githubusercontent.com/35771181/154919056-ae3068a3-158a-48a3-a9b1-10b07885fe44.png)
+
+### The App
+The choice of App platform was down to ease of accessibility: thus Android 5.0 ( (api 21/LOLLIPOP) or nerwer was set as the target demographic (accounted for 70% Finnish smart phone market). 
+![FoodGuard app](https://user-images.githubusercontent.com/35771181/154912426-e8e4ffba-84a0-42c6-a84b-19f030521b9f.png)
+
+The User Would log in to the app once, and then their id would be stored. Along with this, A new user food item list would be generateed in the cloud. The cloud database was hosted with  google’s Firebase Database servers. The choice of Firebase was primarily based on ease of integration, and the possibility to easily integrate advertising and other features in the future.
+
+### The IOT device
+![IOT device](https://user-images.githubusercontent.com/35771181/154917472-e25c2059-e802-4d9e-97f8-4060d17ca41c.png)
+
+The IOT device was made by attaching a E-paper displat to an ESP8266. A LiPo battery was used to power the item.  
+
+The e-paper would provide a display that would display the information even in the case of the battery running out, and also consumed significantly less than other alternatives. The ESP8266 was chosen for its wifi connectivity and the breadth of its supported libraries. This allowed us to iterate with arduino quickly. An ESP32 was our original choice, but due to our lack of experience and the immaturity of the platform, we felt compelled to switch away from it.
+
+### Issues
+
+1) Security is an issue that was not addressed during development. If the product was developed foreward, a different securrity structure would be advised.
+2) The database does not scale gracefully, and switching to any structured database would provide a performance improvement. 
+3) WIFI was used for communication with the device, which is power inefficient. BLE was a choice early in development, but due to our lack of expeience with it, it was ignored.
+
+My key contribuion was the app that we created and project management. 
+
